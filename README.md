@@ -1,4 +1,4 @@
-<h1>TEAM-15</h1>
+<h1>AI Career Navigator</h1>
 
 Installation packages required : express, mongodb, mongoose, body-parser, ejs, nodemon
 
