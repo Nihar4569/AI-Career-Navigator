@@ -2,8 +2,7 @@
 
 Installation packages required : express, mongodb, mongoose, body-parser, ejs, nodemon
 
-To start our node server using local host -
-
+1) To start our node server using local host -
 Go to Terminal and enter the following commands :
 
 ```
@@ -11,8 +10,7 @@ Go to Terminal and enter the following commands :
 2. npm run dev
 ```
 
-To start our python server using local host -
-
+2) To start our python server using local host -
 Go to Terminal and enter the following commands :
 
 ```
