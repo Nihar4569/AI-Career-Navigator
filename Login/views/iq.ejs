@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>IQ Test</title>
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f5f5f5;
+				margin: 0;
+				padding: 0;
+			}
+
+			#quiz {
+				background-color: #fff;
+				max-width: 600px;
+				margin: 20px auto;
+				padding: 20px;
+				border-radius: 8px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			}
+
+			h1 {
+				text-align: center;
+				color: #007bff;
+			}
+
+			p {
+				font-size: 18px;
+				color: #333;
+			}
+
+			input[type="radio"] {
+				margin-left: 10px;
+			}
+
+			button {
+				display: block;
+				margin: 20px auto;
+				padding: 10px 20px;
+				background-color: #007bff;
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+
+			#timer {
+				font-size: 20px;
+				color: #333;
+				text-align: center;
+			}
+
+			#result {
+				text-align: center;
+				margin-top: 20px;
+				display: none;
+			}
+
+			#score {
+				font-size: 24px;
+				color: #007bff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="quiz">
+			<h1>IQ Test</h1>
+			<div id="question-container">
+				<!-- Questions and timer will be inserted here dynamically -->
+			</div>
+			<button id="start-button" onclick="startTest()">Start Test</button>
+			<button id="next-button" style="display: none" onclick="nextQuestion()">
+				Next
+			</button>
+			<div id="timer">Time remaining: 20 seconds</div>
+		</div>
+
+		<div id="result" style="display: none">
+			<h2>Your IQ Score:</h2>
+			<p id="score">Calculating...</p>
+			<a href="http://127.0.0.1:5000/" target="_blank">
+				<button>Done</button>
+			</a>
+		</div>
+
+		<script>
+			const questions = [
+				{
+					question:
+						"Which number is the odd one out in the following sequence: 2, 4, 8, 16, 32?",
+					options: [
+						{ text: "2", correct: false },
+						{ text: "8", correct: true },
+						{ text: "16", correct: false },
+						{ text: "32", correct: false },
+					],
+				},
+				{
+					question: "What comes next in the sequence: 3, 6, 9, 12, ...?",
+					options: [
+						{ text: "15", correct: false },
+						{ text: "16", correct: false },
+						{ text: "18", correct: false },
+						{ text: "21", correct: true },
+					],
+				},
+				{
+					question:
+						"If the word FLY is coded as HOB, what would DOG be coded as?",
+					options: [
+						{ text: "FRI", correct: false },
+						{ text: "GPE", correct: true },
+						{ text: "GOH", correct: false },
+						{ text: "GPJ", correct: false },
+					],
+				},
+
+				{
+					question: "Which one of the five is least like the other four?",
+					options: [
+						{ text: "Apple", correct: false },
+						{ text: "Orange", correct: false },
+						{ text: "Grape", correct: false },
+						{ text: "Carrot", correct: true },
+					],
+				},
+				{
+					question:
+						"What is the missing number in the sequence: 2, 6, 12, 20, ...?",
+					options: [
+						{ text: "24", correct: false },
+						{ text: "30", correct: true },
+						{ text: "36", correct: false },
+						{ text: "42", correct: false },
+					],
+				},
+
+				{
+					question:
+						"If a quarter of a dozen is equal to 3, how many eggs are there in half a dozen?",
+					options: [
+						{ text: "3", correct: false },
+						{ text: "6", correct: false },
+						{ text: "9", correct: true },
+						{ text: "12", correct: false },
+					],
+				},
+
+				{
+					question:
+						"If you have a rectangle and you cut it in half diagonally, how many sides will the resulting shape have?",
+					options: [
+						{ text: "2", correct: false },
+						{ text: "3", correct: true },
+						{ text: "4", correct: false },
+						{ text: "5", correct: false },
+					],
+				},
+
+				{
+					question:
+						"If all bloops are Razzies and some Razzies are Lazzies, then some bloops are definitely Lazzies. Is this statement:",
+					options: [
+						{ text: "True", correct: true },
+						{ text: "False", correct: false },
+					],
+				},
+
+				{
+					question:
+						"Which of the following geometric shapes has the most sides?",
+					options: [
+						{ text: "Octagon", correct: false },
+						{ text: "Nonagon", correct: false },
+						{ text: "Decagon", correct: false },
+						{ text: "Dodecagon", correct: true },
+					],
+				},
+
+				{
+					question:
+						"If you arrange the letters in the word XENOPHOBIA alphabetically, which letter will be in the middle?",
+					options: [
+						{ text: "N", correct: true },
+						{ text: "O", correct: false },
+						{ text: "P", correct: false },
+						{ text: "X", correct: false },
+					],
+				},
+				// Add more questions here...
+			];
+
+			let currentQuestionIndex = 0;
+			let score = 0;
+			let timer;
+
+			function startTest() {
+				document.getElementById("start-button").style.display = "none";
+				document.getElementById("next-button").style.display = "block";
+				showQuestion();
+				startTimer();
+			}
+
+			function showQuestion() {
+				const questionContainer = document.getElementById("question-container");
+				questionContainer.innerHTML = `
+                <p>Question ${currentQuestionIndex + 1}: ${
+					questions[currentQuestionIndex].question
+				}</p>
+                ${questions[currentQuestionIndex].options
+									.map(
+										(option, index) => `
+                    <input type="radio" name="q${currentQuestionIndex}" value="${option.text}"> ${option.text}<br>
+                `
+									)
+									.join("")}
+            `;
+			}
+
+			function startTimer() {
+				let timeLeft = 20;
+				timer = setInterval(() => {
+					document.getElementById(
+						"timer"
+					).textContent = `Time remaining: ${timeLeft} seconds`;
+					if (timeLeft === 0) {
+						clearInterval(timer);
+						nextQuestion();
+					}
+					timeLeft--;
+				}, 1000);
+			}
+
+			function nextQuestion() {
+				const selectedOption = document.querySelector(
+					`input[name="q${currentQuestionIndex}"]:checked`
+				);
+				if (selectedOption) {
+					if (
+						selectedOption.value ===
+						questions[currentQuestionIndex].options.find(
+							(option) => option.correct
+						).text
+					) {
+						score = score + 10;
+					}
+				}
+				currentQuestionIndex++;
+
+				if (currentQuestionIndex < questions.length) {
+					showQuestion();
+					clearInterval(timer);
+					startTimer();
+				} else {
+					showResult();
+				}
+			}
+
+			function showResult() {
+				document.getElementById("quiz").style.display = "none";
+				const result = document.getElementById("result");
+				const scoreDisplay = document.getElementById("score");
+				scoreDisplay.textContent = `Your IQ Score: ${score}`;
+				result.style.display = "block";
+			}
+		</script>
+	</body>
+</html>

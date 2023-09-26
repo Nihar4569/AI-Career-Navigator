@@ -1,0 +1,124 @@
+/* Global styles */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+	text-align: center;
+	color: #333;
+}
+
+/* Input form styles */
+.input-form {
+	margin-top: 20px;
+}
+
+label {
+	display: block;
+	margin-bottom: 8px;
+	color: #666;
+	font-weight: bold;
+}
+
+input[type="text"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.submit-button {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+	background-color: #0056b3;
+}
+
+/* Career list styles */
+.subtitle {
+	margin-top: 20px;
+	color: #333;
+}
+
+.career-list {
+	list-style: none;
+	padding: 0;
+}
+
+.career-link {
+	text-decoration: none;
+	color: #007bff;
+	transition: color 0.3s ease;
+}
+
+.career-link:hover {
+	color: #0056b3;
+}
+
+/* Career details styles */
+.career-name {
+	font-size: 24px;
+	color: #333;
+	margin-top: 20px;
+}
+
+.career-salary {
+	color: #666;
+}
+
+.career-description {
+	margin-top: 20px;
+}
+
+.career-security {
+	margin-top: 20px;
+}
+.apt-test-btn {
+	box-sizing: border-box;
+	appearance: none;
+	background-color: #007bff;
+	border-radius: 0.6em;
+	cursor: pointer;
+	align-self: center;
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1;
+	margin: 20px;
+	padding: 1.2em 2.8em;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	border: none;
+	color: #fff;
+	transform: scale(1);
+	box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.22) inset, rgba(0, 0, 0, 0.22);
+	transition: all 0.4s ease-in-out;
+}
+.apt-test-btn:hover {
+	background-color: #fff;
+	color: #007bff;
+	border: 1px solid #007bff;
+	transform: scale(1.02);
+}

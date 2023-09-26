@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Test Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Aptitude Test Result</h1>
+        <p class="score">Your Score: {{ score }} / {{ total }}</p>
+        <p class="result">
+            {% if score >= (total / 2) %}
+                Congratulations! You performed well in the aptitude test.
+            {% else %}
+                You may want to review and improve your aptitude skills.
+            {% endif %}
+        </p>
+    </div>
+</body>
+</html>

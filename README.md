@@ -1,8 +1,4 @@
-# AI-Career-Navigator
-AI Career Navigator: Your personal career guide. Discover tailored career recommendations, explore in-depth profiles, and finalize your path. Start your journey today.
-
-
-<h1>TEAM-TechCodeers</h1>
+<h1>TEAM-15</h1>
 
 Installation packages required : express, mongodb, mongoose, body-parser, ejs, nodemon
 

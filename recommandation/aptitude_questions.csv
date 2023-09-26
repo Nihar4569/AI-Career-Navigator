@@ -1,0 +1,21 @@
+id,question,option1,option2,option3,option4,answer
+1,What does RAM stand for?,Random Access Memory,Read-Only Memory,Remote Access Module,Randomly Accessed Memory,Random Access Memory
+2,What is the primary function of an operating system?,Managing hardware resources,Editing documents,Playing games,Accessing the internet,Managing hardware resources
+3,Which programming language is often used for web development?,Python,Java,HTML,C++,HTML
+4,What is the purpose of a firewall in computer security?,To block unauthorized access,To increase internet speed,To store data,To create backups,To block unauthorized access
+5,What is the difference between HTTP and HTTPS?,HTTPS is secure and encrypted,HTTP is secure and encrypted,HTTP is faster,HTTPS is used for email,HTTPS is secure and encrypted
+6,What is the main purpose of a database management system (DBMS)?,To store and manage data,To browse the web,To play video games,To send emails,To store and manage data
+7,What does HTML stand for?,Hypertext Markup Language,Hypertext Transfer Protocol,High-Level Programming Language,Hyperlink and Text Markup Language,Hypertext Markup Language
+8,What is a software bug?,A programming error or defect,A type of insect,A computer virus,A hardware component,A programming error or defect
+9,What is the difference between software and hardware?,Software refers to programs, while hardware refers to physical components,Software and hardware are the same,Software is only used in gaming,Hardware refers to programs, while software refers to physical components,Software refers to programs, while hardware refers to physical components
+10,What is an algorithm in computer science?,A step-by-step procedure or set of instructions for solving a problem,A computer virus,A type of hardware component,A programming language,A step-by-step procedure or set of instructions for solving a problem
+11,What is cloud computing?,Storing and accessing data and programs over the internet,Fixing computer hardware,Creating computer graphics,Playing online games,Storing and accessing data and programs over the internet
+12,What is open-source software?,Software with source code that is freely available to the public,Software that can only be used on Windows,Software that is very expensive,Software that is not secure,Software with source code that is freely available to the public
+13,What does CPU stand for?,Central Processing Unit,Computer Programming Unit,Control Panel Unit,Common Peripheral Unit,Central Processing Unit
+14,What is object-oriented programming (OOP)?,A programming paradigm that uses objects and classes,An operating system,An internet protocol,An office productivity software,A programming paradigm that uses objects and classes
+15,What is a loop in programming?,A control structure that repeats a set of instructions,An input device,An output device,A type of computer memory,A control structure that repeats a set of instructions
+16,What is a function in programming?,A reusable block of code that performs a specific task,The main computer screen,The power button of a computer,An error message,A reusable block of code that performs a specific task
+17,What is a variable in programming?,A container for storing data,The result of a mathematical operation,The code of a program,A type of computer virus,A container for storing data
+18,What is a compiler?,A program that translates high-level code into machine code,A computer game,A programming language,A type of computer hardware,A program that translates high-level code into machine code
+19,What is cybersecurity?,The practice of protecting computer systems and networks from theft or damage to their hardware, software, or electronic data.,A type of computer language,A computer operating system,The process of designing a website,The practice of protecting computer systems and networks from theft or damage to their hardware, software, or electronic data.
+20,What is a GUI in computing?,Graphical User Interface,General Use Interface,Global Unification Interface,Gaming User Interface,Graphical User Interface

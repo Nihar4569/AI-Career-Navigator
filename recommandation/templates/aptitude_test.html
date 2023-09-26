@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aptitude Test</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Aptitude Test</h1>
+        <form method="POST" action="/aptitude_test">
+            <ul class="question-list">
+                {% for question in questions %}
+                <li class="question">
+                    <p>{{ question.question }}</p>
+                    <ul class="options">
+                        {% for option in question.options %}
+                        <li>
+                            <label>
+                                <input type="radio" name="question_{{ question.id }}" value="{{ option }}"> {{ option }}
+                            </label>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

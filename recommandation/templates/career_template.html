@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Career Details</title>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='style.css') }}"
+		/>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="title">Career Details</h1>
+			<h2 class="career-name">{{ career }}</h2>
+			<p class="career-salary">Salary: {{ salary }}</p>
+			<p class="career-description">Job Description: {{ job_description }}</p>
+			<p class="career-security">Job Security: {{ job_security }}</p>
+
+			<!-- Display topics to be covered -->
+			<p class="topics">Topics to Be Covered:</p>
+			<ul>
+				{% for topic in topics_covered %}
+				<li>{{ topic }}</li>
+				{% endfor %}
+			</ul>
+
+			<!-- Add a button or link to take the aptitude test -->
+			<a href="/aptitude_test" class="aptitude-link">
+				<button class="apt-test-btn">Aptitude Test</button>
+			</a>
+		</div>
+	</body>
+</html>

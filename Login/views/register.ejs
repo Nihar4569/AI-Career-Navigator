@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up/Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1 style="color: rgb(34, 3, 3);"> <%= title %>  </h1>
+   <h1 style="color: rgb(65, 211, 7);"> <%= password %>  </h1>
+   <h1 style="color: rgb(255, 0, 200);"> <%= email %>  </h1>
+
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+           <!-- signup -->
+			<div class="signup">
+				<form action="/register" method="post">
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="name" placeholder="User name" >
+					<input type="number" name="number" placeholder="PHone number" >
+					<input type="email" name="email" placeholder="Email" >
+					<input type="password" name="password" placeholder="Password" >
+					<input type="password" name="cpassword" placeholder="Confirm Password" >
+					<button type="submit">Sign up</button>
+				</form>
+			</div>
+         <!-- login -->
+			<div class="login">
+				<form method="post" action="/login">
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" placeholder="Email" required="">
+					<input type="password" name="password" placeholder="Password" required="">
+					<button>Login</button>
+				</form>
+			</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Career Recommendations</h1>
+        <form method="POST" action="/recommend" class="input-form">
+            <label for="Class/Grade">Class/Grade:</label>
+            <input type="text" name="Class/Grade" id="Class/Grade" required><br>
+            <label for="Skills">Skills:</label>
+        <input type="text" name="Skills" id="Skills" required><br>
+        <label for="Interests">Interests:</label>
+        <input type="text" name="Interests" id="Interests" required><br>
+        <label for="Hobbies">Hobbies:</label>
+        <input type="text" name="Hobbies" id="Hobbies" required><br>
+        <label for="Passion">Passion:</label>
+        <input type="text" name="Passion" id="Passion" required><br>
+        <label for="Favourite Subject">Favourite Subject:</label>
+        <input type="text" name="Favourite Subject" id="Favourite Subject" required><br>
+            <input type="submit" value="Recommend Careers" class="submit-button">
+        </form>
+
+        <h2 class="subtitle">Recommended Careers:</h2>
+        <ul class="career-list">
+            {% for career in recommendations %}
+            <li><a href="/career/{{ career }}" class="career-link">{{ career }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

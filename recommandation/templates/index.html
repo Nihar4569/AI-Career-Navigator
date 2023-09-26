@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Career Input</title>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='style.css') }}"
+		/>
+		<link rel="stylesheet" href="../static/style.css" />
+		<script src="../static/script.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="title">Career Input</h1>
+			<form method="POST" action="/recommend" class="input-form">
+				<label for="Class/Grade">Class/Grade:</label>
+				<input type="text" name="Class/Grade" id="Class/Grade" required /><br />
+				<label for="Skills">Skills:</label>
+				<input type="text" name="Skills" required /><br /><br />
+				<label for="Interests">What truly excites and engages you:</label>
+				<input type="text" name="Interests" required /><br /><br />
+				<label for="Hobbies">Your Areas of Fascination:</label>
+				<input type="text" name="Hobbies" required /><br /><br />
+				<label for="Passion">Your Intense Dedication in:</label>
+				<input type="text" name="Passion" required /><br /><br />
+				<label for="Favourite Subject">Favorite Subject:</label>
+				<input type="text" name="Favourite Subject" required /><br /><br />
+				<input type="submit" value="Recommend Careers" class="submit-button" />
+			</form>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container">
+    <nav>
+        <div class="navbar">
+          <div class="logo">
+            <!--<img src="images (1).png" alt="">-->
+            <h3 style="align-items: center;"><bold>DASHBOARD</bold></bold></h3>
+          </div>
+          <ul>
+            <li><a href="#">
+              <i class="fas fa-user"></i>
+              <span class="nav-item">Profile</span>
+            </a>
+            </li>
+            <li><a href="#">
+              <i class="fas fa-archway"></i>
+              <span class="nav-item">Home</span>
+            </a>
+            </li>
+            <li><a href="#">
+              <i class="fas fa-tasks"></i>
+              <span class="nav-item">IQ Test</span>
+            </a>
+            </li>
+            <li><a href="#">
+              <i class="fab fa-accusoft"></i>
+              <span class="nav-item">AI Tutor</span>
+            </a>
+           
+            </li>
+            <li><a href="#">
+              <i class="fas fa-question-circle"></i>
+              <span class="nav-item">FAQ</span>
+            </a>
+            </li>
+            <li><a href="#" class="logout">
+              <i class="fas fa-sign-out-alt"></i>
+              <span class="nav-item">Logout</span>
+            </a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <section class="main">
+      <div class="main-top">
+        <p>Welcome <%= name %></p>
+        <p>Explore the universe!</p>
+      </div>
+      <div class="main-body">
+        <!--<h1>Recent Jobs</h1>-->
+      
+        <div class="job_card">
+            <div class="job_details">
+              <div class="img">
+                <i class="fa fa-check-square"></i>
+              </div>
+              <div class="text">
+                <a href="http://127.0.0.1:5000/">
+                  <h2>Enter Details</h2>
+              </a>
+                <span>Let us know you more so you can get accurate predictions</span>
+              </div>
+           </div>
+        </div>
+        <div class="job_card">
+        <div class="job_details">
+          <div class="img">
+            <i class="fa fa-gears"></i>
+          </div>
+          <div class="text">
+            <a href="iq">
+              <h2>IQ/Aptitude Test</h2>
+          </a>
+            <span>Check your IQ score to see where you stand</span>
+          </div>
+        </div>
+        <div class="job_salary">
+          <h4>90</h4>
+          <span>3 days ago</span>
+        </div>
+      </div>
+      <div class="job_card">
+        <div class="job_details">
+          <div class="img">
+            <i class="fa fa-line-chart"></i>
+          </div>
+          <div class="text">
+            <h2>Progress</h2>
+            <span>How close you are to your goal</span>
+          </div>
+        </div>
+        <div class="job_salary">
+          <h4>65%</h4>
+          <span>2 days ago</span>
+        </div>
+      </div>
+      
+      <div class="job_card">
+        <div class="job_details">
+          <div class="img">
+            <i class="fa fa-spinner"></i>
+          </div>
+          <div class="text">
+            <a href="trivia">
+              <h2>Take a Test</h2>
+          </a>
+            <span>Explore your options with your interests and AI's imagination</span>
+          </div>
+        </div>
+        <div class="job_salary">
+          <h4>Programmer</h4>
+          <span>2 days ago</span>
+        </div>
+      </div>
+
+      
+
+      <div class="job_card">
+        <div class="job_details">
+          <div class="img">
+            <i class="fa fa-commenting"></i>
+          </div>
+          <div class="text">
+            <a href="chat">
+              <h2>Chat Assistance</h2>
+          </a>
+            <span>Have doubts? Clear it out!</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    </section>
+  </div>
+
+</body>
+</html>
