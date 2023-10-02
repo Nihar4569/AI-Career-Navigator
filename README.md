@@ -14,10 +14,11 @@ Go to Terminal and enter the following commands :
 Go to Terminal and enter the following commands :
 
 ```
-1. pip install pandas 
-2. pip install scikit-learn 
-3. pip install flask
-4. python app.py
+1. cd recommandation
+2. pip install pandas 
+3. pip install scikit-learn 
+4. pip install flask
+5. python app.py
 ```
 
 The problem statement we are working on is : "Making career choices and AI based counselling accessible to every child at secondary level along with aptitude tests and detailed career paths."
